@@ -196,6 +196,7 @@
 <!-- Подключаем JQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js">
 </script>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
 
 <script>
     var List = $('#tdlApp ul');
@@ -221,6 +222,8 @@
     // // Сразу вызываем эту функцию, вдруг в памяти уже остались задачи с прошлого раза
     // showTasks();
     // Следим, когда пользователь напишет новую задачу в поле ввода и нажмёт Enter
+    let tg = window.Telegram.WebApp;
+    console.log(tg);
     $('#tdlApp input').on('keydown', function (e) {
         if (e.keyCode != 13) return;
         var str = e.target.value;
